@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: cubovision-server
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: "unzip -o cubovision-server.zip && npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: OMDB_API_KEY
+        value: fdce1a3b
+      - key: SPORT_API_BASE_URL
+        sync: false
+      - key: SPORT_API_KEY
+        sync: false
+      - key: CACHE_TTL_SECONDS
+        value: 60
+      - key: ADMIN_SECRET_KEY
+        generateValue: true

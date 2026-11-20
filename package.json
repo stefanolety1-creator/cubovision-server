@@ -1,0 +1,31 @@
+{
+  "name": "cubovision-server",
+  "version": "1.0.0",
+  "description": "Cubovision Middleware & Stream Variations Server for Render.com",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "unzip -o cubovision-server.zip || true",
+    "prestart": "unzip -o cubovision-server.zip || true",
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "cubovision",
+    "render",
+    "streaming",
+    "sports-api",
+    "live-tv",
+    "middleware"
+  ],
+  "author": "Cubovision Team",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
